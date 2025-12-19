@@ -1,7 +1,6 @@
 // DATA TARGET
-// const countDown = new Date("Jan 1, 2026 00:00:00").getTime();
-const countDown = new Date("Dec 30, 2025 14:00:00").getTime();
-// const countDown = new Date("Dec 19, 2025 21:28:00").getTime();
+const countDown = new Date("Jan 1, 2026 00:00:00").getTime();
+//const countDown = new Date("Dec 30, 2025 14:00:00").getTime();
 
 // TEMPO INIZIALE (una sola volta)
 const startTime = Date.now();
