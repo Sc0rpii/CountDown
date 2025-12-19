@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-top: #FA812F;
+    --background-bottom: #FAB12F;
+    --timer-bar-color: #DD0303;
+    --text-color: #FEF3E2;
+
+    --text-font: "Oswald", sans-serif;
+    --text-weight: 700;
+    --text-size: 2.6rem;
+
+    --countdown-text-font: "Orbitron", sans-serif;
+    --countdown-text-weight: 900;
+    --countdown-text-size: 1.6rem;
+}
+body{
+    height: 100vh;
+
+    background: linear-gradient(
+    to bottom right,
+    var(--background-top),
+    var(--background-bottom)
+    );
+
+    color: var(--text-color);
+}
+
+#timer{
+    font-family: var(--countdown-text-font);
+    font-size: var(--countdown-text-size);
+    font-weight: var(--countdown-text-weight);
+}
+#endTimer{
+    font-family: var(--text-font);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+    text-align: center;
+}
+/* From chatGpt */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.round-time-bar {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.progress-ring {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* parte dall'alto */
+}
+
+.progress-ring__background {
+    fill: none;
+    stroke: #2a2a2a;
+    stroke-width: 12;
+}
+
+.progress-ring__progress {
+    fill: none;
+    stroke: var(--timer-bar-color);
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 565;
+    stroke-dashoffset: 565;
+    transition: stroke-dashoffset 1s linear;
+}
+
+/* testo centrale */
+.timer-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
